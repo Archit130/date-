@@ -12,8 +12,7 @@
 body{
     background:url('5576792.jpg');
     background-repeat: no-repeat;
-    
-    
+    background-size:cover;
 }
 .button{
     background-color:pink;
