@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go On a Date With Me?</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="/index.css" rel="stylesheet" />
+    <style>
+      /* Add some basic styling */
+      #myButton {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center mx-auto" style="margin-top: 20%">
+      <div
+        class="box text-center mx-auto"
+        style="
+          width: 50%;
+          padding: 2em 2em 2em;
+          background: rgba(255, 255, 255, 0.26);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+          border: 1px solid rgba(255, 255, 255, 0.17);
+        "
+      >
+        <p class="head">
+          Will you go out with me?
+          <img
+            src="/heart.gif"
+            class="img-fluid"
+            alt="roses"
+            style="height: 2em"
+          />
+        </p>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 text-center">
+              <button class="button mx-5" type="submit">YES</button>
+              <button class="button" id="myButton" onmouseover="moveButton()">
+               NO
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // JavaScript function to move the button on hover
+      function moveButton() {
+        // Get the button element
+        var button = document.getElementById("myButton");
+
+        // Get the button's current position
+        var rect = button.getBoundingClientRect();
+
+        // Calculate the maximum allowable X and Y coordinates
+        var maxX = window.innerWidth - rect.width;
+        var maxY = window.innerHeight - rect.height;
+
+        // Generate random position values within the allowable range
+        var randomX = Math.min(Math.floor(Math.random() * maxX), maxX);
+        var randomY = Math.min(Math.floor(Math.random() * maxY), maxY);
+
+        // Apply the new position
+        button.style.left = randomX + "px";
+        button.style.top = randomY + "px";
+      }
+    </script>
+  </body>
+</html>

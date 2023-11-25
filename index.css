@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head{
+    font-family: 'Dancing Script', cursive;
+    font-size:2.5em;
+}
+body{
+    background:url('5576792.jpg');
+    background-repeat: no-repeat;
+    
+    
+}
+.button{
+    background-color:pink;
+    padding: 5px 20px 5px;
+    border: 1px white;
+}
