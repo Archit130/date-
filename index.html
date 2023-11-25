@@ -16,6 +16,15 @@
       #myButton {
         position: absolute;
       }
+      .modal-backdrop {
+        display: none;
+        z-index: 1040 !important;
+      }
+
+      .modal-content {
+        margin: 2px auto;
+        z-index: 1100 !important;
+      }
     </style>
   </head>
   <body>
@@ -24,7 +33,7 @@
         class="box text-center mx-auto"
         style="
           width: 50%;
-          padding: 2em 2em 2em;
+          padding: 2em 2em 5em;
           background: rgba(255, 255, 255, 0.26);
           border-radius: 16px;
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -45,10 +54,46 @@
 
         <div class="container">
           <div class="row">
-            <div class="col-sm-6 text-center">
-              <button class="button mx-5" type="submit">YES</button>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-4 text-center">
+              <button
+                class="button mx-3"
+                type="submit"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                YES
+              </button>
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel" style="color:pink">
+                       So, it's a YES!
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      We can grab coffee, lunch, chai, dinner, or whatever you
+                      fancy, and no matter what, let's make sure to end the day
+                      with a scoop of delicious ice cream?
+                    </div>
+                  </div>
+                </div>
+              </div>
               <button class="button" id="myButton" onmouseover="moveButton()">
-               NO
+                NO
               </button>
             </div>
           </div>
